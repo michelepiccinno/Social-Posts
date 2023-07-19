@@ -76,7 +76,7 @@ posts.forEach((singleObject, i) => {
     let giorno = dataObj.getDate();
     let mese = dataObj.getMonth() + 1;
     let anno = dataObj.getFullYear();
-    let formattedDate = giorno + " " + mese + " " + anno;
+    let formattedDate = giorno + "/" + mese + "/" + anno;
 
 
     //CREO IL IL DIV NEL QUALE INIETTARE TUTTO IL CODICE, ASSEGNO LA CLASSE E INIETTO L'HTML
@@ -160,18 +160,18 @@ posts.forEach((element, i) => {
 })
 
 
-// //GESTISCO L'ASSENZA DELL'IMG DEL PROFILO ("al momento non funziona")
-// posts.forEach((singleObject, i) => {
-//     const authImg = singleObject.author.image;
-//     if (authImg === null) {
-//         console.log(authImg);
-//         let containerImageNull = document.querySelector(".post-meta__icon");
-//         const newTagImg = document.createElement("p");
-//         newTagImg.innerHTML = `aaa`;
-//         containerImageNull.appendChild(newTagImg);
-//         console.log(newTagImg);
-//     }
-// });
+//GESTISCO L'ASSENZA DELL'IMG DEL PROFILO ("al momento non funziona")
+posts.forEach((singleObject, i) => {
+    const authImg = singleObject.author.image;
+    if (authImg === null) {
+        console.log(authImg);
+        let containerImageNull = document.querySelector(".post-meta__icon");
+        const newTagImg = document.createElement("p");
+        newTagImg.innerHTML = `aaa`;
+        containerImageNull.appendChild(newTagImg);
+        console.log(newTagImg);
+    }
+});
 
 
 
